@@ -10,38 +10,69 @@ const projects = [
     demoUrl: "https://ai-mock-interview-1ena.vercel.app/",
     githubUrl: "https://github.com/harshita0612/ai-mock-interview.git",
   },
+
   {
     id: 2,
-    title: "Trendflix",
+    title: "Brain Stroke Prediction",
     description:
-      "A dynamic movie site using the TMDb API with live search, stored user queries, and a section that highlights the top five most-searched movies",
+      "A machine learning model predicting the likelihood of brain stroke, based on key health indicators- such as age, smoking status, medical histroy etc",
     image: "/projects/project2.png",
-    tags: ["React","TailwindCSS" ,"TMDB API", "Appwrite"],
-    demoUrl: "https://trendflix-api-powered-cinemas.vercel.app/",
-    githubUrl: "https://github.com/harshita0612/trendflix-api-powered-cinema.git",
-  },
-  {
-    id: 3,
-    title: "Zentry",
-    description:
-      "An immersive 3D web showcase inspired by Zentry to present unique gaming collections and hubs with an interactive, modern design",
-    image: "/projects/project3.png",
-    tags: ["React", "TailwindCSS", "GSAP"],
-    demoUrl: "https://zentry-3d-gaming-hub.vercel.app/",
-    githubUrl: "https://github.com/harshita0612/zentry-3d-gaming-hub.git",
+    tags: ["Python","Flask" ,"Pandas", "Random Forest", "Numpy"],
+    githubUrl: "https://github.com/harshita0612/brain-stroke-prediction.git",
   },
 
   {
     id: 3,
+    title: "Telecom Customer Churn Analysis",
+    description:
+      "Telecom churn analysis project involving SQL-based data exploration, Power BI dashboard creation, and machine learning models for predicting future churn trends",
+    image: "/projects/project3.png",
+    tags: ["SQL","PowerBI" ,"Python", "Machine Learning", "MS Excel"],
+    githubUrl: "https://github.com/harshita0612/telecom-customer-churn-analysis-using-sql-ml-powerbi.git",
+  },
+
+  {
+    id: 4,
+    title: "Vendor Performance Data Analysis",
+    description:
+      "Vendor performance analysis using data visualization techniques to assess top brands, trends, and key insights through graphical summaries and comparative metrics",
+    image: "/projects/project4.png",
+    tags: ["SQL","Python", "MS Excel", "Matplotlib", "Pandas"],
+    githubUrl: "https://github.com/harshita0612/vendor-performance-data-analysis-using-sql-python.git",
+  },
+
+  {
+    id: 5,
+    title: "Trendflix",
+    description:
+      "A dynamic movie site using the TMDb API with live search, stored user queries, and a section that highlights the top five most-searched movies",
+    image: "/projects/project5.png",
+    tags: ["React","TailwindCSS" ,"TMDB API", "Appwrite"],
+    demoUrl: "https://trendflix-api-powered-cinemas.vercel.app/",
+    githubUrl: "https://github.com/harshita0612/trendflix-api-powered-cinema.git",
+  },
+
+  {
+    id: 6,
     title: "CurePoint Health Center",
     description:
       "A responsive healthcare platform showcasing services, organizational information, and an online patient registration system with a user-friendly UI",
-    image: "/projects/project4.png",
+    image: "/projects/project6.png",
     tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://curepoint-health-centre.vercel.app/",
     githubUrl: "https://github.com/harshita0612/CurePoint-hospital-management-portal.git",
   },
 
+  {
+    id: 7,
+    title: "Zentry",
+    description:
+      "An immersive 3D web showcase inspired by Zentry to present unique gaming collections and hubs with an interactive, modern design",
+    image: "/projects/project7.png",
+    tags: ["React", "TailwindCSS", "GSAP"],
+    demoUrl: "https://zentry-3d-gaming-hub.vercel.app/",
+    githubUrl: "https://github.com/harshita0612/zentry-3d-gaming-hub.git",
+  },
 
   
 ];
@@ -89,13 +120,15 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     <a
                       href={project.githubUrl}
                       target="_blank"
